@@ -14,3 +14,12 @@ dependencies {
     compileOnly(libs.android.kotlin.gradlePlugin)
     compileOnly(libs.compose.compiler.gradlePlugin)
 }
+
+gradlePlugin {
+    plugins {
+        register("androidApplication") {
+            id = "neilt.mobile.android.application"
+            implementationClass = "neilt.mobile.AndroidApplicationConventionPlugin"
+        }
+    }
+}

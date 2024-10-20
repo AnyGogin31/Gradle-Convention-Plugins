@@ -1,6 +1,7 @@
 package neilt.mobile
 
 import com.android.build.api.dsl.ApplicationExtension
+import neilt.mobile.convention.Configuration
 import neilt.mobile.convention.configureAndroidApplication
 import neilt.mobile.convention.extension.getPlugin
 import neilt.mobile.convention.extension.libs
@@ -17,6 +18,31 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
 
             extensions.configure<ApplicationExtension> {
                 configureAndroidApplication(this)
+
+                compileSdk = Configuration.COMPILE_SDK
+
+                defaultConfig {
+                    applicationId = Configuration.APPLICATION_ID
+
+                    targetSdk = Configuration.TARGET_SDK
+                    minSdk = Configuration.MIN_SDK
+
+                    versionName = Configuration.VERSION_NAME
+                    versionCode = Configuration.VERSION_CODE
+
+                    vectorDrawables {
+                        useSupportLibrary = true
+                    }
+                }
+
+                signingConfigs {
+                    /* create("release") {} */
+                }
+
+                buildTypes {
+                    /* debug {} */
+                    /* release {} */
+                }
             }
         }
     }
