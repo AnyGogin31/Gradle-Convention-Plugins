@@ -3,6 +3,8 @@ package neilt.mobile
 import com.android.build.api.dsl.ApplicationExtension
 import neilt.mobile.convention.Configuration
 import neilt.mobile.convention.configureAndroidApplication
+import neilt.mobile.convention.configureAndroidCompose
+import neilt.mobile.convention.configureAndroidKotlin
 import neilt.mobile.convention.extension.getPlugin
 import neilt.mobile.convention.extension.libs
 import org.gradle.api.Plugin
@@ -18,6 +20,8 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
 
             extensions.configure<ApplicationExtension> {
                 configureAndroidApplication(this)
+                configureAndroidCompose(this)
+                configureAndroidKotlin(this)
 
                 compileSdk = Configuration.COMPILE_SDK
 

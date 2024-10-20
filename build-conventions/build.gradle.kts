@@ -21,5 +21,15 @@ gradlePlugin {
             id = "neilt.mobile.android.application"
             implementationClass = "neilt.mobile.AndroidApplicationConventionPlugin"
         }
+
+        register("androidCompose") {
+            id = "neilt.mobile.android.compose"
+            implementationClass = "neilt.mobile.AndroidComposeConventionPlugin"
+        }
+
+        register("androidKotlin") {
+            id = "neilt.mobile.android.kotlin"
+            implementationClass = "neilt.mobile.AndroidKotlinConventionPlugin"
+        }
     }
 }
