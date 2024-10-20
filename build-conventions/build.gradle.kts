@@ -8,3 +8,9 @@ java {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
 }
+
+dependencies {
+    compileOnly(libs.android.application.gradlePlugin)
+    compileOnly(libs.android.kotlin.gradlePlugin)
+    compileOnly(libs.compose.compiler.gradlePlugin)
+}
