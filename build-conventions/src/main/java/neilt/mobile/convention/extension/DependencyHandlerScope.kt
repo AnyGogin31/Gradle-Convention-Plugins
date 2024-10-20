@@ -22,19 +22,19 @@ internal fun DependencyHandlerScope.implementation(fileCollection: ConfigurableF
     "implementation"(fileCollection)
 }
 
-fun DependencyHandlerScope.debugImplementation(provider: Provider<*>) {
+internal fun DependencyHandlerScope.debugImplementation(provider: Provider<*>) {
     "debugImplementation"(provider)
 }
 
-fun DependencyHandlerScope.releaseImplementation(provider: Provider<*>) {
+internal fun DependencyHandlerScope.releaseImplementation(provider: Provider<*>) {
     "releaseImplementation"(provider)
 }
 
-fun DependencyHandlerScope.androidTestImplementation(provider: Provider<*>) {
+internal fun DependencyHandlerScope.androidTestImplementation(provider: Provider<*>) {
     "androidTestImplementation"(provider)
 }
 
-fun DependencyHandlerScope.testImplementation(provider: Provider<*>) {
+internal fun DependencyHandlerScope.testImplementation(provider: Provider<*>) {
     "testImplementation"(provider)
 }
 
