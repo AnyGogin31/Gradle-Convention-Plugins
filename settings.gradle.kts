@@ -1,4 +1,7 @@
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 pluginManagement {
+    includeBuild("build-conventions")
     repositories {
         google {
             content {
@@ -11,6 +14,7 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -19,5 +23,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Gradle Convention Plugins"
+rootProject.name = "Gradle_Convention_Plugins"
+
 include(":app")
